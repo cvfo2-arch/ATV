@@ -1,0 +1,823 @@
+index.html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha Loja de Tênis</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Meu CSS -->
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .logo {
+            font-weight: bold;
+            color: #0d6efd;
+        }
+
+        .categoria {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+        }
+
+        .produto img {
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .produto:hover {
+            transform: scale(1.02);
+            transition: 0.2s;
+        }
+
+        .banner {
+            height: 180px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            margin-top: 30px;
+            padding: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- FAIXA DE AVISO -->
+    <div class="bg-primary text-white text-center py-2">
+        Frete grátis nas compras acima de R$ 199
+    </div>
+
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container">
+
+            <a class="navbar-brand logo" href="#">
+                👟 Minha Loja
+            </a>
+
+            <!-- Botão do celular -->
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Início</a>
+                    </li>
+
+                    <!-- DROPDOWN -->
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle"
+                            href="#"
+                            data-bs-toggle="dropdown">
+
+                            Categorias
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Masculino
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Feminino
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    Esportivo
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Ofertas
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <!-- BUSCA -->
+                <form class="d-flex">
+
+                    <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Buscar tênis...">
+
+                    <button class="btn btn-primary">
+                        Buscar
+                    </button>
+
+                </form>
+
+                <!-- CARRINHO -->
+                <button class="btn btn-outline-dark ms-2">
+                    🛒 <span class="badge bg-danger">2</span>
+                </button>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- CONTEÚDO -->
+    <div class="container">
+
+
+        <!-- CARROSSEL -->
+        <div id="meuCarrossel"
+            class="carousel slide mt-4"
+            data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+
+                    <div class="banner bg-primary text-white">
+                        TÊNIS NOVOS 👟
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <div class="banner bg-dark text-white">
+                        OFERTAS ESPECIAIS 🔥
+                    </div>
+
+                </div>
+
+                <div class="carousel-item">
+
+                    <div class="banner bg-success text-white">
+                        FRETE GRÁTIS 🚚
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#meuCarrossel"
+                data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+
+            <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#meuCarrossel"
+                data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+
+        <!-- CATEGORIAS -->
+        <h2 class="mt-4">
+            Categorias
+        </h2>
+
+        <div class="row g-3">
+
+            <div class="col-lg-2 col-4">
+                <div class="card categoria">
+                    👟 Casual
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-4">
+                <div class="card categoria">
+                    🏃 Corrida
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-4">
+                <div class="card categoria">
+                    ⚽ Esportivo
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-4">
+                <div class="card categoria">
+                    👞 Social
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-4">
+                <div class="card categoria">
+                    🔥 Ofertas
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-4">
+                <div class="card categoria">
+                    ⭐ Novos
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- DESTAQUES -->
+        <h2 class="mt-5">
+            Tênis em destaque
+        </h2>
+
+        <div class="row g-3">
+
+
+            <!-- PRODUTO 1 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card produto h-100">
+
+                    <span class="badge text-bg-danger position-absolute m-2">
+                        Promoção
+                    </span>
+
+                    <img
+                        src="https://placehold.co/400x300?text=Tenis+1"
+                        class="card-img-top"
+                        alt="Tênis esportivo">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Tênis Runner
+                        </h5>
+
+                        <p>
+                            <span class="text-muted text-decoration-line-through">
+                                R$ 199,00
+                            </span>
+
+                            <br>
+
+                            <strong class="text-danger">
+                                R$ 149,00
+                            </strong>
+                        </p>
+
+                        <button
+                            class="btn btn-primary w-100"
+                            data-bs-toggle="modal"
+                            data-bs-target="#produto1">
+
+                            Ver produto
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 2 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card produto h-100">
+
+                    <span class="badge text-bg-danger position-absolute m-2">
+                        Promoção
+                    </span>
+
+                    <img
+                        src="https://placehold.co/400x300?text=Tenis+2"
+                        class="card-img-top"
+                        alt="Tênis casual">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Tênis Street
+                        </h5>
+
+                        <p>
+                            <span class="text-muted text-decoration-line-through">
+                                R$ 250,00
+                            </span>
+
+                            <br>
+
+                            <strong class="text-danger">
+                                R$ 189,00
+                            </strong>
+                        </p>
+
+                        <button
+                            class="btn btn-primary w-100"
+                            data-bs-toggle="modal"
+                            data-bs-target="#produto2">
+
+                            Ver produto
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 3 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card produto h-100">
+
+                    <span class="badge text-bg-danger position-absolute m-2">
+                        Promoção
+                    </span>
+
+                    <img
+                        src="https://placehold.co/400x300?text=Tenis+3"
+                        class="card-img-top"
+                        alt="Tênis esportivo">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Tênis Sport
+                        </h5>
+
+                        <p>
+                            <span class="text-muted text-decoration-line-through">
+                                R$ 300,00
+                            </span>
+
+                            <br>
+
+                            <strong class="text-danger">
+                                R$ 229,00
+                            </strong>
+                        </p>
+
+                        <button
+                            class="btn btn-primary w-100"
+                            data-bs-toggle="modal"
+                            data-bs-target="#produto3">
+
+                            Ver produto
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUTO 4 -->
+            <div class="col-lg-3 col-md-6">
+
+                <div class="card produto h-100">
+
+                    <span class="badge text-bg-danger position-absolute m-2">
+                        Promoção
+                    </span>
+
+                    <img
+                        src="https://placehold.co/400x300?text=Tenis+4"
+                        class="card-img-top"
+                        alt="Tênis casual">
+
+                    <div class="card-body">
+
+                        <h5 class="card-title">
+                            Tênis Classic
+                        </h5>
+
+                        <p>
+                            <span class="text-muted text-decoration-line-through">
+                                R$ 220,00
+                            </span>
+
+                            <br>
+
+                            <strong class="text-danger">
+                                R$ 169,00
+                            </strong>
+                        </p>
+
+                        <button
+                            class="btn btn-primary w-100"
+                            data-bs-toggle="modal"
+                            data-bs-target="#produto4">
+
+                            Ver produto
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BANNERS -->
+        <h2 class="mt-5">
+            Ofertas
+        </h2>
+
+        <div class="row g-3">
+
+            <div class="col-md-6">
+
+                <div class="banner bg-warning">
+                    TÊNIS COM ATÉ 30% OFF
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="banner bg-info">
+                    NOVA COLEÇÃO 👟
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- BENEFÍCIOS -->
+        <h2 class="mt-5">
+            Nossos benefícios
+        </h2>
+
+        <div class="row text-center g-3">
+
+            <div class="col-md-4">
+
+                <div class="card p-3">
+
+                    <h3>🚚</h3>
+
+                    <h5>Entrega rápida</h5>
+
+                    <p>
+                        Receba seu pedido em casa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card p-3">
+
+                    <h3>🔒</h3>
+
+                    <h5>Pagamento seguro</h5>
+
+                    <p>
+                        Compre com segurança.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="card p-3">
+
+                    <h3>↩️</h3>
+
+                    <h5>Troca fácil</h5>
+
+                    <p>
+                        Você pode trocar seu produto.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- NEWSLETTER -->
+        <div class="text-center mt-5">
+
+            <h3>
+                Receba nossas ofertas
+            </h3>
+
+            <p>
+                Cadastre seu e-mail.
+            </p>
+
+            <div class="input-group mb-3">
+
+                <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Digite seu e-mail">
+
+                <button class="btn btn-primary">
+                    Assinar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL PRODUTO 1 -->
+    <div class="modal fade" id="produto1">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Tênis Runner
+                    </h5>
+
+                    <button
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <img
+                        src="https://placehold.co/400x300?text=Tenis+Runner"
+                        class="img-fluid">
+
+                    <p class="mt-3">
+                        Tênis confortável para corrida e atividades
+                        do dia a dia.
+                    </p>
+
+                    <h4 class="text-danger">
+                        R$ 149,00
+                    </h4>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button class="btn btn-primary">
+                        Adicionar ao carrinho
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL PRODUTO 2 -->
+    <div class="modal fade" id="produto2">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Tênis Street
+                    </h5>
+
+                    <button
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <h4>R$ 189,00</h4>
+
+                    <p>
+                        Tênis confortável para usar no dia a dia.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL PRODUTO 3 -->
+    <div class="modal fade" id="produto3">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Tênis Sport
+                    </h5>
+
+                    <button
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <h4>R$ 229,00</h4>
+
+                    <p>
+                        Tênis ideal para atividades esportivas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MODAL PRODUTO 4 -->
+    <div class="modal fade" id="produto4">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Tênis Classic
+                    </h5>
+
+                    <button
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <h4>R$ 169,00</h4>
+
+                    <p>
+                        Um tênis simples e bonito para o dia a dia.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                    <h5>Institucional</h5>
+
+                    <p>Sobre nós</p>
+                    <p>Contato</p>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <h5>Ajuda</h5>
+
+                    <p>Trocas</p>
+                    <p>Entrega</p>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <h5>Redes sociais</h5>
+
+                    <p>
+                        Instagram
+                    </p>
+
+                    <p>
+                        Facebook
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-3">
+
+                    <h5>Pagamento</h5>
+
+                    <p>
+                        💳 Cartão
+                    </p>
+
+                    <p>
+                        💰 PIX
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr>
+
+            <p class="text-center mb-0">
+                © 2026 Minha Loja de Tênis
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript do Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
